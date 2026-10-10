@@ -1,0 +1,352 @@
+{
+  "source_rows": 1067371,
+  "source_missing_customer_rows": 243007,
+  "invalid_required_field_rows": 0,
+  "zero_price_rows": 6202,
+  "negative_price_rows": 5,
+  "zero_quantity_rows": 0,
+  "cancellation_rows": 19494,
+  "negative_quantity_rows": 22950,
+  "cancellation_with_positive_quantity_rows": 1,
+  "cancellation_positive_qty_raw_signed_amount_gbp": 373.57,
+  "cancellation_positive_qty_sign_rule_delta_gbp": -747.14,
+  "cancellation_positive_qty_product_ledger_delta_gbp": 0.0,
+  "distinct_canonical_rows": 1033036,
+  "suspected_duplicate_rows": 34335,
+  "duplicated_line_groups": 32907,
+  "cross_sheet_duplicate_groups": 22202,
+  "valid_clean_rows": 1027017,
+  "non_product_rows": 5889,
+  "product_return_rows": 17914,
+  "product_purchase_rows": 1003214,
+  "anonymous_product_rows": 226965,
+  "gross_product_sales_gbp": 19642692.150004413,
+  "product_returns_gbp": 716425.9700000109,
+  "net_product_revenue_gbp": 18926266.180004355,
+  "anonymous_net_product_revenue_gbp": 2567651.639999735,
+  "all_codes_net_revenue_gbp": 19013462.69800441,
+  "non_product_net_revenue_gbp": 87196.51799999991,
+  "purchase_orders": 39516,
+  "observed_buyers": 5852,
+  "anonymous_orders": 2922,
+  "identified_purchase_revenue_gbp": 17068567.97000001,
+  "invoice_identity_audit": {
+    "invoices_with_multiple_customer_ids": 0,
+    "invoices_mixing_anonymous_and_identified_lines": 0,
+    "invoices_with_multiple_countries": 0
+  },
+  "period": {
+    "starts_on": "2009-12-01",
+    "ends_on": "2011-12-09",
+    "last_month": "2011-12-01",
+    "cohort_warmup_end": "2010-03-01"
+  },
+  "dedup_sensitivity": {
+    "product_net_revenue_without_dedup_gbp": 19382476.010012038,
+    "product_purchase_revenue_without_dedup_gbp": 20108995.400012538
+  },
+  "excluded_stock_codes": [
+    {
+      "stock_code": "POST",
+      "representative_description": "POSTAGE",
+      "rows": 2079,
+      "net_revenue_gbp": 110430.40999999999,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "DOT",
+      "representative_description": "DOTCOM POSTAGE",
+      "rows": 1418,
+      "net_revenue_gbp": 309844.1000000001,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "M",
+      "representative_description": "Manual",
+      "rows": 1385,
+      "net_revenue_gbp": -84058.42000000001,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "C2",
+      "representative_description": "CARRIAGE",
+      "rows": 274,
+      "net_revenue_gbp": 13136.0,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "D",
+      "representative_description": "Discount",
+      "rows": 173,
+      "net_revenue_gbp": -12879.630000000005,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "S",
+      "representative_description": "SAMPLES",
+      "rows": 101,
+      "net_revenue_gbp": -5991.110000000001,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "BANK CHARGES",
+      "representative_description": " Bank Charges",
+      "rows": 100,
+      "net_revenue_gbp": -35482.248999999996,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "ADJUST",
+      "representative_description": "Adjustment by Peter on 24/05/2010 1",
+      "rows": 67,
+      "net_revenue_gbp": 6835.239999999999,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "AMAZONFEE",
+      "representative_description": "AMAZON FEE",
+      "rows": 36,
+      "net_revenue_gbp": -221520.5,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "DCGS0058",
+      "representative_description": "MISO PRETTY  GUM",
+      "rows": 30,
+      "net_revenue_gbp": 34.81999999999999,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "GIFT_0001_20",
+      "representative_description": "Dotcomgiftshop Gift Voucher £20.00",
+      "rows": 26,
+      "net_revenue_gbp": 471.06000000000006,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "GIFT_0001_30",
+      "representative_description": "Dotcomgiftshop Gift Voucher £30.00",
+      "rows": 24,
+      "net_revenue_gbp": 610.0899999999999,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGSSGIRL",
+      "representative_description": "GIRLS PARTY BAG",
+      "rows": 23,
+      "net_revenue_gbp": 295.63,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGSSBOY",
+      "representative_description": "BOYS PARTY BAG",
+      "rows": 21,
+      "net_revenue_gbp": 251.35000000000002,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "PADS",
+      "representative_description": "PADS TO MATCH ALL CUSHIONS",
+      "rows": 18,
+      "net_revenue_gbp": -36.583000000000006,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "CRUK",
+      "representative_description": "CRUK Commission",
+      "rows": 16,
+      "net_revenue_gbp": -7933.43,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "GIFT_0001_10",
+      "representative_description": "Dotcomgiftshop Gift Voucher £10.00",
+      "rows": 14,
+      "net_revenue_gbp": 126.21,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0076",
+      "representative_description": "SUNJAR LED NIGHT NIGHT LIGHT",
+      "rows": 14,
+      "net_revenue_gbp": 275.9599999999999,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "TEST001",
+      "representative_description": "This is a test product.",
+      "rows": 13,
+      "net_revenue_gbp": 202.5,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0003",
+      "representative_description": "BOXED GLASS ASHTRAY",
+      "rows": 13,
+      "net_revenue_gbp": 32.589999999999996,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "GIFT_0001_50",
+      "representative_description": "Dotcomgiftshop Gift Voucher £50.00",
+      "rows": 6,
+      "net_revenue_gbp": 253.59000000000003,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "GIFT_0001_40",
+      "representative_description": "Dotcomgiftshop Gift Voucher £40.00",
+      "rows": 5,
+      "net_revenue_gbp": 166.08999999999997,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0069",
+      "representative_description": "OOH LA LA DOGS COLLAR",
+      "rows": 5,
+      "net_revenue_gbp": 80.30999999999999,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0004",
+      "representative_description": "HAYNES CAMPER SHOULDER BAG",
+      "rows": 4,
+      "net_revenue_gbp": 67.94,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "ADJUST2",
+      "representative_description": "Adjustment by Peter on Jun 25 2010 ",
+      "rows": 3,
+      "net_revenue_gbp": 731.05,
+      "exclusion_class": "charge_or_adjustment_code"
+    },
+    {
+      "stock_code": "DCGS0072",
+      "representative_description": "CAT CAMOUFLAGUE COLLAR",
+      "rows": 3,
+      "net_revenue_gbp": 20.68,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0070",
+      "representative_description": "CAMOUFLAGE DOG COLLAR",
+      "rows": 2,
+      "net_revenue_gbp": 25.44,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "SP1002",
+      "representative_description": "KID'S CHALKBOARD/EASEL",
+      "rows": 2,
+      "net_revenue_gbp": 14.75,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "GIFT_0001_80",
+      "representative_description": "Dotcomgiftshop Gift Voucher £80.00",
+      "rows": 2,
+      "net_revenue_gbp": 0.0,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0068",
+      "representative_description": "DOGS NIGHT COLLAR",
+      "rows": 2,
+      "net_revenue_gbp": 17.12,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0066N",
+      "representative_description": "NAVY CUDDLES DOG HOODIE",
+      "rows": 2,
+      "net_revenue_gbp": 17.3,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0044",
+      "representative_description": "HANDZ-OFF CAR FRESHENER",
+      "rows": 1,
+      "net_revenue_gbp": 2.57,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "GIFT_0001_70",
+      "representative_description": "Dotcomgiftshop Gift Voucher £70.00",
+      "rows": 1,
+      "net_revenue_gbp": 59.57,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0075",
+      "representative_description": "CAMOUFLAGUE DOG LEAD",
+      "rows": 1,
+      "net_revenue_gbp": 12.72,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0037",
+      "representative_description": "KEY-RING CORKSCREW",
+      "rows": 1,
+      "net_revenue_gbp": 12.72,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0062",
+      "representative_description": "ROAD-RAGE CAR FRESHENER",
+      "rows": 1,
+      "net_revenue_gbp": 2.51,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "TEST002",
+      "representative_description": "This is a test product.",
+      "rows": 1,
+      "net_revenue_gbp": 1.0,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "B",
+      "representative_description": "Adjust bad debt",
+      "rows": 1,
+      "net_revenue_gbp": 11062.06,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    },
+    {
+      "stock_code": "DCGS0041",
+      "representative_description": "HAYNES MINI-COOPER PLAYING CARDS",
+      "rows": 1,
+      "net_revenue_gbp": 5.06,
+      "exclusion_class": "unmapped_nonstandard_sku"
+    }
+  ],
+  "unmapped_nonstandard_sku_sensitivity": {
+    "rows": 338,
+    "net_revenue_gbp": 8093.947000000009
+  },
+  "customer_concentration": {
+    "top_one_percent_buyers": 59,
+    "top_one_percent_purchase_revenue_share": 0.3208662905772761
+  },
+  "source_manifest": {
+    "source": "https://archive.ics.uci.edu/dataset/502/online+retail+ii",
+    "download": "https://raw.githubusercontent.com/KristerMartinez/online_retail_ii/main/online_retail_II.xlsx",
+    "license": "CC BY 4.0",
+    "workbook_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+    "sheet_rows": {
+      "Year 2009-2010": 525461,
+      "Year 2010-2011": 541910
+    },
+    "ingestion": "openpyxl read_only; 50000 row CSV batches; DuckDB 256MB limit",
+    "transport": {
+      "download": "https://raw.githubusercontent.com/KristerMartinez/online_retail_ii/main/online_retail_II.xlsx",
+      "bytes": 45622278,
+      "etag": "\"f3b0c88265ceb18093a6844a9c1c648849a522fe2686aab99c408f976293af68\"",
+      "sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+      "method": "8 non-overlapping verified HTTP ranges; XLSX ZIP CRC checked",
+      "mirror_commit": "3a5eb9132055218af623a5550fc3f8d124b0e10c",
+      "reproducible_download": "https://raw.githubusercontent.com/KristerMartinez/online_retail_ii/3a5eb9132055218af623a5550fc3f8d124b0e10c/online_retail_II.xlsx",
+      "mirror_commit_source": "https://api.github.com/repos/KristerMartinez/online_retail_ii/commits?path=online_retail_II.xlsx&per_page=1"
+    }
+  }
+}

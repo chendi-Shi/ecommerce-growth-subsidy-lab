@@ -1,0 +1,10 @@
+treatment,n,buyers,split
+0,12784,67,train
+1,12784,150,train
+2,12832,111,train
+0,4261,24,validation
+1,4262,59,validation
+2,4277,43,validation
+0,4261,31,test
+1,4261,58,test
+2,4278,35,test

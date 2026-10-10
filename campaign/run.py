@@ -195,7 +195,7 @@ def main():
 
 数据：Hillstrom原始64,000名客户，前一年内购买过；随机分配男装邮件、女装邮件、不发邮件，结果观察14天。消费金额为USD。不是抖音数据，也不是发券实验。
 
-## 确认性结果
+## 主要平均效果（公开数据回顾研究）
 
 |营销内容|购买转化增量(pp)|95% CI(pp)|Holm p-value|
 |---|---:|---:|---:|
@@ -203,6 +203,8 @@ def main():
     for row in conversion.itertuples():
         report+=f'|{ARM_NAMES[row.arm]}|{row.estimate*100:.3f}|[{row.ci_low*100:.3f}, {row.ci_high*100:.3f}]|{row.holm_p:.5g}|\n'
     report+=f'''
+差值95%区间为单比较区间，Holm校正用于两次主要购买率检验；当前指标选择不代表原实验预注册。
+
 SRM p={quality['srm_p']:.4f}，最大前置特征|SMD|={summary['max_abs_smd']:.4f}。通过审计不等于证明任何数据都随机。全部分配用户进入ITT；访问后购买率仅用于描述路径，不能把访问者当作重新随机的实验人群。
 
 ## 有限触达策略

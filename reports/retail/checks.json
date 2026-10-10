@@ -1,0 +1,9 @@
+{
+  "buyer_identity_error": 0,
+  "revenue_identity_error_gbp": 1.1641532182693481e-10,
+  "ledger_identity_error_gbp": 5.122274160385132e-09,
+  "customer_coverage_error_gbp": 3.748573362827301e-08,
+  "log_decomposition_error": 3.3306690738754696e-16,
+  "invalid_retention_rows": 0,
+  "duplicate_order_keys": 0
+}

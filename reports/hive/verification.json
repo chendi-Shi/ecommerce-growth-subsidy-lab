@@ -1,0 +1,179 @@
+{
+  "engine": "Apache Hive",
+  "image": "apache/hive:4.2.1",
+  "status": "passed",
+  "execution": "HiveServer2 / embedded Derby / local Tez / ORC",
+  "source_sha256": "de55c2b368fb54a856283d0dd6ff78fbefab2ae935483e5e9b3437843581793d",
+  "source_rows": 64000,
+  "distributed_cluster": false,
+  "checks": [
+    {
+      "group": "0",
+      "metric": "users",
+      "python": 21306,
+      "hive": 21306,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "0",
+      "metric": "visitors",
+      "python": 2262,
+      "hive": 2262,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "0",
+      "metric": "buyers",
+      "python": 122,
+      "hive": 122,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "0",
+      "metric": "total_spend",
+      "python": 13908.33,
+      "hive": 13908.330000000002,
+      "absolute_difference": 1.8189894035458565e-12,
+      "passed": true
+    },
+    {
+      "group": "0",
+      "metric": "visit_rate",
+      "python": 0.10616727682343002,
+      "hive": 0.10616727682343002,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "0",
+      "metric": "conversion_rate",
+      "python": 0.005726086548390125,
+      "hive": 0.005726086548390125,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "0",
+      "metric": "spend_per_user",
+      "python": 0.6527893551112363,
+      "hive": 0.6527893551112364,
+      "absolute_difference": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "users",
+      "python": 21307,
+      "hive": 21307,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "visitors",
+      "python": 3894,
+      "hive": 3894,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "buyers",
+      "python": 267,
+      "hive": 267,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "total_spend",
+      "python": 30311.69,
+      "hive": 30311.69000000002,
+      "absolute_difference": 2.1827872842550278e-11,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "visit_rate",
+      "python": 0.18275684047496127,
+      "hive": 0.18275684047496127,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "conversion_rate",
+      "python": 0.01253109306800582,
+      "hive": 0.01253109306800582,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "1",
+      "metric": "spend_per_user",
+      "python": 1.4226165110057727,
+      "hive": 1.4226165110057738,
+      "absolute_difference": 1.1102230246251565e-15,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "users",
+      "python": 21387,
+      "hive": 21387,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "visitors",
+      "python": 3238,
+      "hive": 3238,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "buyers",
+      "python": 189,
+      "hive": 189,
+      "absolute_difference": 0,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "total_spend",
+      "python": 23038.11,
+      "hive": 23038.11,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "visit_rate",
+      "python": 0.151400383410483,
+      "hive": 0.151400383410483,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "conversion_rate",
+      "python": 0.008837144059475383,
+      "hive": 0.008837144059475383,
+      "absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "group": "2",
+      "metric": "spend_per_user",
+      "python": 1.0772015710478329,
+      "hive": 1.0772015710478329,
+      "absolute_difference": 0.0,
+      "passed": true
+    }
+  ]
+}

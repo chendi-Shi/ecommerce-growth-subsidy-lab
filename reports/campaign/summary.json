@@ -1,0 +1,235 @@
+{
+  "source": {
+    "dataset": "Hillstrom 2008 retail email randomized experiment",
+    "rows": 64000,
+    "source_url": "https://hillstorm1.s3.us-east-2.amazonaws.com/hillstorm_no_indices.csv.gz",
+    "original_csv_url": "http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv",
+    "primary_description": "https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html",
+    "md5": "a68a81291f53a14f4e29002629803ba3",
+    "sha256": "bab6578f60db5d792f1c2372c502f029152a5249cf5ea84390f3b7f885d7234f",
+    "arm_counts": {
+      "0": 21306,
+      "1": 21307,
+      "2": 21387
+    },
+    "assignment_probabilities": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "outcome_window_days": 14,
+    "currency": "USD",
+    "customer_id": "Stable row index assigned locally; source does not disclose customer IDs.",
+    "population": "Customers who last purchased within prior 12 months; existing-customer activation.",
+    "redistribution": "No explicit original dataset licence found; runtime download only, no raw row upload."
+  },
+  "audit": {
+    "n": 64000,
+    "srm_p": 0.9036929575604196,
+    "arms": [
+      {
+        "treatment": 0,
+        "users": 21306,
+        "buyers": 122,
+        "visit_rate": 0.10616727682343002,
+        "conversion_rate": 0.005726086548390125,
+        "spend_per_user": 0.6527893551112363
+      },
+      {
+        "treatment": 1,
+        "users": 21307,
+        "buyers": 267,
+        "visit_rate": 0.18275684047496127,
+        "conversion_rate": 0.01253109306800582,
+        "spend_per_user": 1.4226165110057727
+      },
+      {
+        "treatment": 2,
+        "users": 21387,
+        "buyers": 189,
+        "visit_rate": 0.151400383410483,
+        "conversion_rate": 0.008837144059475383,
+        "spend_per_user": 1.0772015710478329
+      }
+    ],
+    "spend_quantiles": {
+      "0.0": 0.0,
+      "0.5": 0.0,
+      "0.9": 0.0,
+      "0.99": 0.0,
+      "0.999": 243.6604900000019,
+      "1.0": 499.0
+    },
+    "zero_spend_share": 0.99096875
+  },
+  "primary_endpoint": "14-day purchase conversion; two comparisons vs control, Holm correction",
+  "seed": 2026,
+  "economics": {
+    "margin": 0.3,
+    "contact_cost_usd": 0.05,
+    "type": "ASSUMED scenario, not observed profit/coupon effect"
+  },
+  "max_abs_smd": 0.01365900039927897,
+  "train_n": 38400,
+  "validation_n": 12800,
+  "test_n": 12800,
+  "validation_selected": {
+    "model": "t_forest",
+    "depth": 1.0,
+    "score": 0.15726153335898724,
+    "contact_share": 0.85703125
+  },
+  "budget_selected": {
+    "model": "dr_learner",
+    "depth": 0.15625,
+    "score": 0.04205951932309575,
+    "contact_share": 0.15625
+  },
+  "budget_max_share": 0.15625,
+  "best_homogeneous_arm": 1,
+  "policy_nuisance": "Train-fitted Ridge; randomized design e=(1/3,1/3,1/3)",
+  "uncertainty": "Paired per-user DR influence-score t interval conditional on fixed train/validation selection.",
+  "controls": {
+    "no_test_tuning": true,
+    "train_validation_test_disjoint": true,
+    "feature_post_treatment_excluded": true
+  },
+  "test_revenue_outlier_check": {
+    "buyers": 124,
+    "max_spend": 499.0
+  },
+  "design_power_example": {
+    "baseline": 0.005726086548390125,
+    "absolute_mde": 0.003,
+    "per_arm": 15152,
+    "alpha_per_comparison": 0.025,
+    "power": 0.8,
+    "note": "Bonferroni conservative planning for 2 primary vs-control comparisons; Holm used in analysis."
+  },
+  "policies": [
+    {
+      "policy": "no_contact",
+      "contact_share": 0.0,
+      "mens_share": 0.0,
+      "womens_share": 0.0,
+      "incremental_revenue": 0.0,
+      "revenue_ci_low": 0.0,
+      "revenue_ci_high": 0.0,
+      "revenue_se": 0.0,
+      "ht_revenue": 0.0,
+      "scenario_net_profit": 0.0,
+      "profit_ci_low": 0.0,
+      "profit_ci_high": 0.0,
+      "breakeven_cost": null
+    },
+    {
+      "policy": "all_best_arm",
+      "contact_share": 1.0,
+      "mens_share": 1.0,
+      "womens_share": 0.0,
+      "incremental_revenue": 0.6285604130682928,
+      "revenue_ci_low": -0.005233669156551546,
+      "revenue_ci_high": 1.2623544952931371,
+      "revenue_se": 0.32333968952101394,
+      "ht_revenue": 0.64378359375,
+      "scenario_net_profit": 0.13856812392048784,
+      "profit_ci_low": -0.05157010074696547,
+      "profit_ci_high": 0.3287063485879411,
+      "breakeven_cost": 0.18856812392048783
+    },
+    {
+      "policy": "random_same_contacts",
+      "contact_share": 0.15625,
+      "mens_share": 0.15625,
+      "womens_share": 0.0,
+      "incremental_revenue": 0.09821256454192076,
+      "revenue_ci_low": -0.0008177608057111652,
+      "revenue_ci_high": 0.19724288988955269,
+      "revenue_se": 0.050521826487658426,
+      "ht_revenue": 0.10059118652343751,
+      "scenario_net_profit": 0.021651269362576234,
+      "profit_ci_low": -0.00805782824171334,
+      "profit_ci_high": 0.05136036696686581,
+      "breakeven_cost": 0.18856812392048786
+    },
+    {
+      "policy": "purchase_propensity",
+      "contact_share": 0.15625,
+      "mens_share": 0.15625,
+      "womens_share": 0.0,
+      "incremental_revenue": 0.2378269359529216,
+      "revenue_ci_low": -0.16374764355430227,
+      "revenue_ci_high": 0.6394015154601455,
+      "revenue_se": 0.20486937871302774,
+      "ht_revenue": 0.27048046875,
+      "scenario_net_profit": 0.06353558078587644,
+      "profit_ci_low": -0.056929703156007774,
+      "profit_ci_high": 0.18400086472776067,
+      "breakeven_cost": 0.4566277170296094
+    },
+    {
+      "policy": "budget_targeted",
+      "contact_share": 0.15625,
+      "mens_share": 0.084453125,
+      "womens_share": 0.071796875,
+      "incremental_revenue": 0.09223719302838797,
+      "revenue_ci_low": -0.19664376172413162,
+      "revenue_ci_high": 0.3811181477809075,
+      "revenue_se": 0.14737701224713687,
+      "ht_revenue": 0.10090078125000002,
+      "scenario_net_profit": 0.019858657908516406,
+      "profit_ci_low": -0.06680215562946927,
+      "profit_ci_high": 0.10651947144650208,
+      "breakeven_cost": 0.1770954106145049
+    },
+    {
+      "policy": "validation_optimized",
+      "contact_share": 0.850546875,
+      "mens_share": 0.491171875,
+      "womens_share": 0.359375,
+      "incremental_revenue": 0.3592115510257869,
+      "revenue_ci_low": -0.12274492530919923,
+      "revenue_ci_high": 0.841168027360773,
+      "revenue_se": 0.24587742579381194,
+      "ht_revenue": 0.3580710937500001,
+      "scenario_net_profit": 0.06523612155773606,
+      "profit_ci_low": -0.0793494793032489,
+      "profit_ci_high": 0.20982172241872102,
+      "breakeven_cost": 0.1266990314998642
+    }
+  ],
+  "paired": [
+    {
+      "comparison": "budget_targeted vs no_contact",
+      "estimate": 0.09223719302838797,
+      "se": 0.14737701224713687,
+      "ci_low": -0.19664376172413162,
+      "ci_high": 0.3811181477809075,
+      "p_value": 0.5314187512841164
+    },
+    {
+      "comparison": "budget_targeted vs random_same_contacts",
+      "estimate": -0.005975371513532766,
+      "se": 0.13944886054694064,
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097,
+      "p_value": 0.9658218442633313
+    },
+    {
+      "comparison": "budget_targeted vs purchase_propensity",
+      "estimate": -0.14558974292453364,
+      "se": 0.24782627665968812,
+      "ci_low": -0.6313662580173995,
+      "ci_high": 0.34018677216833226,
+      "p_value": 0.55690051498374
+    },
+    {
+      "comparison": "budget_targeted vs all_best_arm",
+      "estimate": -0.5363232200399048,
+      "se": 0.30883528468934307,
+      "ci_low": -1.141686502562664,
+      "ci_high": 0.0690400624828541,
+      "p_value": 0.08248193750715128
+    }
+  ]
+}

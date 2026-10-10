@@ -1,0 +1,4 @@
+price_band,purchase_lines,products,identified_buyers,units,purchase_revenue
+high: >= GBP5,171345,2078,5102,548926.0,4761084.090000134
+low: < GBP2,473629,2985,5658,8241414.0,7542428.810000474
+mid: GBP2-<5,358240,3002,5562,2397434.0,7339179.249999635

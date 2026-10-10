@@ -1,0 +1,62 @@
+Picked up JAVA_TOOL_OPTIONS: --enable-preview --enable-native-access=ALL-UNNAMED
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.24.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+Picked up JAVA_TOOL_OPTIONS: --enable-preview --enable-native-access=ALL-UNNAMED
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/opt/hive/lib/log4j-slf4j-impl-2.24.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/opt/hadoop/share/hadoop/common/lib/slf4j-reload4j-1.7.36.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
+col_name,data_type,comment
+customer_id,string,
+recency,int,
+history,double,
+mens,int,
+womens,int,
+newbie,int,
+zip_code,string,
+channel,string,
+visit,int,
+conversion,int,
+spend,double,
+,NULL,NULL
+# Partition Information,NULL,NULL
+# col_name,data_type,comment
+treatment,int,
+,NULL,NULL
+# Detailed Table Information,NULL,NULL
+Database:           ,growth_lab          ,NULL
+OwnerType:          ,USER                ,NULL
+Owner:              ,hive                ,NULL
+CreateTime:         ,Sat Oct 10 03:17:12 GMT 2026,NULL
+LastAccessTime:     ,UNKNOWN             ,NULL
+Retention:          ,0                   ,NULL
+Location:           ,file:/opt/hive/data/warehouse/growth_lab.db/dwd_campaign,NULL
+Table Type:         ,EXTERNAL_TABLE      ,NULL
+Table Parameters:,NULL,NULL
+,COLUMN_STATS_ACCURATE,{\"BASIC_STATS\":\"true\"}
+,EXTERNAL            ,TRUE                
+,TRANSLATED_TO_EXTERNAL,TRUE                
+,bucketing_version   ,2                   
+,external.table.purge,TRUE                
+,numFiles            ,3                   
+,numPartitions       ,3                   
+,numRows             ,64000               
+,orc.compress        ,SNAPPY              
+,rawDataSize         ,20160000            
+,totalSize           ,802641              
+,transient_lastDdlTime,1791602232          
+,NULL,NULL
+# Storage Information,NULL,NULL
+SerDe Library:      ,org.apache.hadoop.hive.ql.io.orc.OrcSerde,NULL
+InputFormat:        ,org.apache.hadoop.hive.ql.io.orc.OrcInputFormat,NULL
+OutputFormat:       ,org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat,NULL
+Compressed:         ,No                  ,NULL
+Num Buckets:        ,-1                  ,NULL
+Bucket Columns:     ,[]                  ,NULL
+Sort Columns:       ,[]                  ,NULL
+Storage Desc Params:,NULL,NULL
+,serialization.format,1                   

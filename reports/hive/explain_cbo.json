@@ -1,0 +1,340 @@
+{
+  "rels": [
+    {
+      "id": "0",
+      "relOp": "org.apache.hadoop.hive.ql.optimizer.calcite.reloperators.HiveTableScan",
+      "table": [
+        "growth_lab",
+        "dwd_campaign"
+      ],
+      "table:alias": "dwd_campaign",
+      "inputs": [],
+      "rowCount": 21307.0,
+      "avgRowSize": 23.739475289810862,
+      "rowType": {
+        "fields": [
+          {
+            "type": "VARCHAR",
+            "nullable": true,
+            "precision": 2147483647,
+            "name": "customer_id"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "recency"
+          },
+          {
+            "type": "DOUBLE",
+            "nullable": true,
+            "name": "history"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "mens"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "womens"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "newbie"
+          },
+          {
+            "type": "VARCHAR",
+            "nullable": true,
+            "precision": 2147483647,
+            "name": "zip_code"
+          },
+          {
+            "type": "VARCHAR",
+            "nullable": true,
+            "precision": 2147483647,
+            "name": "channel"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "visit"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "conversion"
+          },
+          {
+            "type": "DOUBLE",
+            "nullable": true,
+            "name": "spend"
+          },
+          {
+            "type": "INTEGER",
+            "nullable": true,
+            "name": "treatment"
+          },
+          {
+            "type": "BIGINT",
+            "nullable": true,
+            "name": "BLOCK__OFFSET__INSIDE__FILE"
+          },
+          {
+            "type": "VARCHAR",
+            "nullable": true,
+            "precision": 2147483647,
+            "name": "INPUT__FILE__NAME"
+          },
+          {
+            "fields": [
+              {
+                "type": "BIGINT",
+                "nullable": true,
+                "name": "writeid"
+              },
+              {
+                "type": "INTEGER",
+                "nullable": true,
+                "name": "bucketid"
+              },
+              {
+                "type": "BIGINT",
+                "nullable": true,
+                "name": "rowid"
+              }
+            ],
+            "nullable": true,
+            "name": "ROW__ID"
+          },
+          {
+            "type": "BOOLEAN",
+            "nullable": true,
+            "name": "ROW__IS__DELETED"
+          }
+        ],
+        "nullable": false
+      },
+      "partitionColumns": [
+        "treatment"
+      ],
+      "colStats": [
+        {
+          "name": "zip_code",
+          "ndv": 3
+        },
+        {
+          "name": "channel",
+          "ndv": 3
+        },
+        {
+          "name": "spend",
+          "ndv": 194,
+          "minValue": 0.0,
+          "maxValue": 499.0
+        },
+        {
+          "name": "treatment",
+          "ndv": 1,
+          "minValue": 1,
+          "maxValue": 1
+        },
+        {
+          "name": "customer_id",
+          "ndv": 20837
+        },
+        {
+          "name": "recency",
+          "ndv": 12,
+          "minValue": 1,
+          "maxValue": 12
+        },
+        {
+          "name": "history",
+          "ndv": 15384,
+          "minValue": 29.99,
+          "maxValue": 3215.97
+        },
+        {
+          "name": "mens",
+          "ndv": 2,
+          "minValue": 0,
+          "maxValue": 1
+        },
+        {
+          "name": "womens",
+          "ndv": 2,
+          "minValue": 0,
+          "maxValue": 1
+        },
+        {
+          "name": "newbie",
+          "ndv": 2,
+          "minValue": 0,
+          "maxValue": 1
+        },
+        {
+          "name": "visit",
+          "ndv": 2,
+          "minValue": 0,
+          "maxValue": 1
+        },
+        {
+          "name": "conversion",
+          "ndv": 2,
+          "minValue": 0,
+          "maxValue": 1
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "relOp": "org.apache.hadoop.hive.ql.optimizer.calcite.reloperators.HiveFilter",
+      "condition": {
+        "op": {
+          "name": "AND",
+          "kind": "AND",
+          "syntax": "BINARY"
+        },
+        "operands": [
+          {
+            "op": {
+              "name": "=",
+              "kind": "EQUALS",
+              "syntax": "BINARY"
+            },
+            "operands": [
+              {
+                "input": 7,
+                "name": "$7"
+              },
+              {
+                "literal": "Web",
+                "type": {
+                  "type": "VARCHAR",
+                  "nullable": false,
+                  "precision": 2147483647
+                }
+              }
+            ]
+          },
+          {
+            "op": {
+              "name": "=",
+              "kind": "EQUALS",
+              "syntax": "BINARY"
+            },
+            "operands": [
+              {
+                "input": 11,
+                "name": "$11"
+              },
+              {
+                "literal": 1,
+                "type": {
+                  "type": "INTEGER",
+                  "nullable": false
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "rowCount": 7102.333333333333
+    },
+    {
+      "id": "2",
+      "relOp": "org.apache.hadoop.hive.ql.optimizer.calcite.reloperators.HiveAggregate",
+      "group": [
+        6
+      ],
+      "aggs": [
+        {
+          "agg": {
+            "name": "count",
+            "kind": "COUNT",
+            "syntax": "FUNCTION_STAR"
+          },
+          "type": {
+            "type": "BIGINT",
+            "nullable": true
+          },
+          "distinct": false,
+          "operands": [],
+          "name": null
+        },
+        {
+          "agg": {
+            "name": "sum",
+            "kind": "SUM",
+            "syntax": "FUNCTION"
+          },
+          "type": {
+            "type": "DOUBLE",
+            "nullable": true
+          },
+          "distinct": false,
+          "operands": [
+            10
+          ],
+          "name": null
+        },
+        {
+          "agg": {
+            "name": "count",
+            "kind": "COUNT",
+            "syntax": "FUNCTION_STAR"
+          },
+          "type": {
+            "type": "BIGINT",
+            "nullable": true
+          },
+          "distinct": false,
+          "operands": [
+            10
+          ],
+          "name": null
+        }
+      ],
+      "rowCount": 3.0
+    },
+    {
+      "id": "3",
+      "relOp": "org.apache.hadoop.hive.ql.optimizer.calcite.reloperators.HiveProject",
+      "fields": [
+        "zip_code",
+        "users",
+        "_c2"
+      ],
+      "exprs": [
+        {
+          "input": 0,
+          "name": "$0"
+        },
+        {
+          "input": 1,
+          "name": "$1"
+        },
+        {
+          "op": {
+            "name": "/",
+            "kind": "DIVIDE",
+            "syntax": "BINARY"
+          },
+          "operands": [
+            {
+              "input": 2,
+              "name": "$2"
+            },
+            {
+              "input": 3,
+              "name": "$3"
+            }
+          ]
+        }
+      ],
+      "rowCount": 3.0
+    }
+  ]
+}
