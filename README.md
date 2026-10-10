@@ -85,6 +85,7 @@ python infra/run_hive.py --input data/processed/hillstrom.csv --output reports/h
 
 ## 投递材料
 
+- [模型白话讲解](docs/MODELS_EXPLAINED.md)：从业务目标和手算例子理解逻辑回归、Ridge、随机森林、T-Learner、DR-Learner、策略评估及经营分解，附代码入口和自测题。
 - [简历项目描述](docs/RESUME.md)：以业务发现、排除的解释和决策条件组织。
 - [项目方案与JD映射](docs/PROJECT_PLAN.md)：明确各项岗位能力的实际证据。
 - [面试追问指南](docs/INTERVIEW_GUIDE.md)：如何讲清口径反转、结构分解与负结果。
