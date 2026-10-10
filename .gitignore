@@ -1,0 +1,7 @@
+.venv/
+.venv312/
+__pycache__/
+*.pyc
+data/
+reports/test_scores.csv
+.DS_Store
