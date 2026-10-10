@@ -177,6 +177,7 @@ class HiveRunner:
     def __init__(self, container: str, output: Path):
         self.container, self.output = container, output
         self.started = False
+        self.stage: Path | None = None
 
     def command(self, args: list[str], timeout: int = 600):
         return subprocess.run(args, text=True, capture_output=True, timeout=timeout,
@@ -194,8 +195,16 @@ class HiveRunner:
                 "--silent=true", "--showHeader=true", "--outputformat=csv2",
                 "--color=false", "--force=false"]
         if file:
+            # This release's JLine -f path can echo/truncate the script and
+            # return zero without sending statements to HiveServer2. Read the
+            # exact staged SQL ourselves and use the working -e batch path.
+            if self.stage is None:
+                raise RuntimeError("Hive SQL staging directory is unavailable")
+            content = (self.stage / Path(file).name).read_text(encoding="utf-8")
+            statements = " ".join(line.strip() for line in content.splitlines()
+                                  if line.strip() and not line.lstrip().startswith("--"))
             args += ["--hivevar", "input_dir=file:///project/input/ods",
-                     "--hivevar", "retail_dir=file:///project/input/retail", "-f", file]
+                     "--hivevar", "retail_dir=file:///project/input/retail", "-e", statements]
         else:
             args += ["-e", sql or "SELECT 1"]
         return self.command(args, timeout=timeout)
@@ -213,6 +222,7 @@ class HiveRunner:
         return result.stdout
 
     def start(self, stage: Path):
+        self.stage = stage
         result = self.command([
             "docker", "run", "-d", "--name", self.container, "--memory=5g", "--cpus=2",
             "--env", "SERVICE_NAME=hiveserver2",
