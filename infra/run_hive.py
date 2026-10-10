@@ -122,7 +122,7 @@ def retail_expected(path: Path) -> dict[str, dict]:
         product, returned = as_bool(row["is_product"]), as_bool(row["is_return"])
         if product:
             stats["net"].append(revenue)
-            if quantity > 0 and price > 0:
+            if quantity > 0 and price > 0 and not returned:
                 stats["positive"].append(revenue)
                 if row["customer_id"]:
                     stats["buyers"].add(row["customer_id"])
@@ -143,7 +143,9 @@ def result_rows(output: str, columns: list[str]) -> list[dict[str, str]]:
     # Beeline's csv2 output may include informational lines before the header.
     parsed = list(csv.reader(io.StringIO(output)))
     for index, row in enumerate(parsed):
-        if row == columns:
+        # Hive can qualify JDBC column labels (table.column) by default.
+        labels = [label.rsplit(".", 1)[-1] for label in row]
+        if labels == columns:
             result = [dict(zip(columns, values)) for values in parsed[index + 1:]
                       if len(values) == len(columns)]
             if not result:
@@ -182,10 +184,15 @@ class HiveRunner:
 
     def beeline(self, sql: str | None = None, file: str | None = None,
                 timeout: int = 600):
-        args = ["docker", "exec", self.container, "/opt/hive/bin/beeline",
+        # Hive 4.2.1's bundled JLine FFM provider needs Java 21 preview support.
+        # BeeLine explicitly requires a system terminal even for -e/-f, so give
+        # the client a container PTY. This does not expose a desktop window.
+        args = ["docker", "exec", "-t",
+                "--env", "JAVA_TOOL_OPTIONS=--enable-preview --enable-native-access=ALL-UNNAMED",
+                "--env", "TERM=dumb", self.container, "/opt/hive/bin/beeline",
                 "-u", "jdbc:hive2://localhost:10000/default", "-n", "hive",
                 "--silent=true", "--showHeader=true", "--outputformat=csv2",
-                "--force=false"]
+                "--color=false", "--force=false"]
         if file:
             args += ["--hivevar", "input_dir=file:///project/input/ods",
                      "--hivevar", "retail_dir=file:///project/input/retail", "-f", file]
@@ -200,7 +207,8 @@ class HiveRunner:
         (self.output / f"{name}.stderr.txt").write_text(result.stderr, encoding="utf-8")
         if result.returncode:
             raise RuntimeError(f"Hive {name} failed ({result.returncode}); inspect saved stderr")
-        if "FAILED:" in result.stdout or "Error:" in result.stderr:
+        combined = result.stdout + result.stderr
+        if "FAILED:" in combined or "Error:" in combined:
             raise RuntimeError(f"Hive {name} reported an error; inspect saved logs")
         return result.stdout
 
@@ -227,6 +235,9 @@ class HiveRunner:
                     if ready.returncode == 0 and "hive_ready" in ready.stdout:
                         print(f"Apache HiveServer2 ready after {attempt} probes", flush=True)
                         return
+                    if any(message in ready.stdout + ready.stderr for message in (
+                            "Unable to create a terminal", "UnsupportedClassVersionError")):
+                        raise RuntimeError("Beeline client JVM/terminal initialization failed; inspect readiness.log")
                 except subprocess.TimeoutExpired:
                     log.write(f"Attempt {attempt}: probe timed out\n")
                     log.flush()

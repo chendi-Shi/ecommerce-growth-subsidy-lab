@@ -13,6 +13,9 @@ python infra/run_hive.py --input data/processed/hillstrom.csv --output reports/h
 ```
 
 The runner does not launch Docker Desktop or expose any host network ports.
+Its Beeline process gets a container pseudo-terminal and Java 21 preview support:
+the bundled JLine FFM provider in this Hive release otherwise fails before JDBC
+connects. The server and metastore use the official image's startup defaults.
 It validates the canonical source, waits for HiveServer2, executes through
 Beeline/JDBC, checks ORC storage and the three partitions, and reconciles all
 64,000 rows' arm counts, visitor/buyer counts, total spend and per-user means

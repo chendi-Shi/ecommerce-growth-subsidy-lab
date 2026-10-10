@@ -47,10 +47,10 @@ CREATE TABLE IF NOT EXISTS ads_retail_sample_month (
 STORED AS ORC;
 INSERT OVERWRITE TABLE ads_retail_sample_month
 SELECT observed_month, COUNT(*),
-       COUNT(DISTINCT CASE WHEN is_product AND quantity>0 AND unit_price>0
+       COUNT(DISTINCT CASE WHEN is_product AND quantity>0 AND unit_price>0 AND NOT is_return
                            THEN customer_id END),
        SUM(CASE WHEN is_product THEN line_revenue ELSE 0 END),
-       SUM(CASE WHEN is_product AND quantity>0 AND unit_price>0
+       SUM(CASE WHEN is_product AND quantity>0 AND unit_price>0 AND NOT is_return
                 THEN line_revenue ELSE 0 END),
        SUM(CASE WHEN is_product AND is_return THEN line_revenue ELSE 0 END)
 FROM dwd_retail_sample
