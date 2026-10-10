@@ -8,6 +8,16 @@
 
 → **[阅读经营诊断决策备忘录](reports/retail_diagnosis/DECISION_MEMO.md)**：竞争解释、11个可比月份、同客户/同商品检查、具体SKU与行动条件。
 
+**继续下钻后，调查对象又被收窄：**
+
+|看似合理的解释|进一步发现|现在优先做什么|
+|---|---|---|
+|38名高购买额客户只是提前采购|整组9—11月+1.49%，但21名11月减额客户中18人宽窗仍减少；同客户前两月增额仅覆盖11月减额的21.06%|查跨窗仍减额者的订单、供给和履约，不能用组总增长关闭问题|
+|海外用户普遍变差|海外名单外客户−£5,616.57，澳洲一国−£10,992.80；德国15名共同买家中12人减少，法国共同买家则增长|澳洲集中采购个案与德国同客篮子分别核查|
+|低价商品增长都来自同一种机制|小剪刀83.19%件数集中一张发票；圣诞装饰£0.29价档覆盖172/174名买家|前者查大单条件，后者查促销/商品定义及毛利；均不直接推断价格因果|
+
+完整证据：[客户跨月与大订单](reports/customer_drilldown/FINDINGS.md)、[国家→客户→SKU](reports/geography_drilldown/FINDINGS.md)、[商品价档与订单集中度](reports/sku_drilldown/FINDINGS.md)。高购买额名单依据2010年1—10月；宽窗基期与名单选择期重叠，可能受选择及均值回归影响，均为回顾性描述。没有把金额相抵当作已识别的采购时间移动。
+
 **营销决策：不显著的定向优势，还不足以决定停止研究。** 64,000人真实三臂邮件实验有正向平均购买率效果，但冻结定向相对同触达随机的收入优势为−$0.006/合格用户，95% CI [−$0.279, $0.267]。该区间仍包含有意义的正向收益和损失。补充人群选择/内容选择的配对拆解，并把额外实施成本转成收入门槛；在相同三臂采集的未来评估情景中，检出$0.05/人的优势约需78.1万名新的独立评估用户，而非继续解释当前点估计。
 
 → **[阅读营销投入决策备忘录](reports/campaign_decision/DECISION_MEMO.md)**：哪些结论成立、哪些仍不确定、成本门槛和下一轮研究设计。
@@ -53,6 +63,9 @@ python -m unittest discover -s tests -v
 python run_project.py --diagnostics-only
 # 或分别运行
 python -m retail.diagnose
+python -m retail.customer_drilldown
+python -m retail.geography_drilldown
+python -m retail.sku_drilldown
 python -m campaign.decision
 ```
 
@@ -75,6 +88,6 @@ python infra/run_hive.py --input data/processed/hillstrom.csv --output reports/h
 - [简历项目描述](docs/RESUME.md)：以业务发现、排除的解释和决策条件组织。
 - [项目方案与JD映射](docs/PROJECT_PLAN.md)：明确各项岗位能力的实际证据。
 - [面试追问指南](docs/INTERVIEW_GUIDE.md)：如何讲清口径反转、结构分解与负结果。
-- [补贴实验迁移方案](docs/EXPERIMENT_DESIGN.md)：尚待真实业务数据实施的指标、成本、功效与协作合同。
+- [补贴实验迁移方案](docs/EXPERIMENT_DESIGN.md)：明确平台收入与GMV、券成本避免重复扣减、同发券比例与同核销预算的区别、跨场景替代及长期购买前移风险。
 
 代码采用MIT许可；UCI数据需CC BY4.0署名。Hillstrom原始再分发许可未明确，使用运行时下载与聚合结果，不再分发行级记录。

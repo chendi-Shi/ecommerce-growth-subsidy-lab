@@ -1,0 +1,9 @@
+population,factor,contribution_gbp
+all_fixed_customers,active_buyers,-14320.881106811086
+all_fixed_customers,orders_per_buyer,-13344.77011743238
+all_fixed_customers,units_per_order,-24103.580768479853
+all_fixed_customers,paid_unit_value,13543.98199272312
+both_novembers_only,active_buyers,0.0
+both_novembers_only,orders_per_buyer,-31660.232165020363
+both_novembers_only,units_per_order,-11491.085154452347
+both_novembers_only,paid_unit_value,-5642.98268052729

@@ -1,0 +1,5 @@
+november_decline,sep_nov_decline,customers,november_delta,sep_oct_delta,sep_nov_delta,arithmetic_amount_covered_by_same_customer_sep_oct_increase
+True,True,18,-87804.98,-50828.87999999999,-138633.86,10467.660000000003
+True,False,3,-10170.049999999997,101864.85,91694.8,10170.049999999997
+False,True,7,9686.319999999998,-31495.68,-21809.360000000004,0.0
+False,False,10,50063.46,29035.580000000005,79099.04,0.0

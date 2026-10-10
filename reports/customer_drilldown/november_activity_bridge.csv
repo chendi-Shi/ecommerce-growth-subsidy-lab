@@ -1,0 +1,5 @@
+activity_group,customers,orders_0,orders_1,units_0,units_1,revenue_0,revenue_1,revenue_delta
+both_novembers,28,177.0,150.0,130015.0,103772.0,216880.74,168086.44,-48794.3
+base_november_only,3,5.0,0.0,13926.0,0.0,17300.4,0.0,-17300.4
+current_november_only,1,0.0,10.0,0.0,9325.0,0.0,27869.45,27869.45
+neither_november,6,0.0,0.0,0.0,0.0,0.0,0.0,0.0

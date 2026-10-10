@@ -1,0 +1,101 @@
+{
+  "fixed_skus": [
+    "22423",
+    "22578",
+    "16014"
+  ],
+  "periods": [
+    "2010-11",
+    "2011-11"
+  ],
+  "selection": "The three SKUs already named in the previous retail diagnosis memo; retrospective selection",
+  "currency": "GBP",
+  "source_lines": 747,
+  "source_scope": "canonical positive identified product lines, excluding returns",
+  "order_grain": [
+    "customer_id",
+    "invoice"
+  ],
+  "price_band_buyer_and_invoice_counts_are_not_additive": true,
+  "metrics": [
+    {
+      "stock_code": "16014",
+      "observed_month": "2010-11",
+      "invoices": 3,
+      "buyers": 3,
+      "units": 16.0,
+      "revenue": 6.720000000000001,
+      "maximum_invoice_units": 10.0,
+      "maximum_buyer_units": 10.0,
+      "paid_value_per_unit": 0.42000000000000004,
+      "maximum_invoice_unit_share": 0.625,
+      "maximum_buyer_unit_share": 0.625
+    },
+    {
+      "stock_code": "16014",
+      "observed_month": "2011-11",
+      "invoices": 10,
+      "buyers": 9,
+      "units": 3606.0,
+      "revenue": 1164.52,
+      "maximum_invoice_units": 3000.0,
+      "maximum_buyer_units": 3000.0,
+      "paid_value_per_unit": 0.3229395452024404,
+      "maximum_invoice_unit_share": 0.831946755407654,
+      "maximum_buyer_unit_share": 0.831946755407654
+    },
+    {
+      "stock_code": "22423",
+      "observed_month": "2010-11",
+      "invoices": 245,
+      "buyers": 197,
+      "units": 1938.0,
+      "revenue": 22142.7,
+      "maximum_invoice_units": 256.0,
+      "maximum_buyer_units": 272.0,
+      "paid_value_per_unit": 11.425541795665636,
+      "maximum_invoice_unit_share": 0.13209494324045407,
+      "maximum_buyer_unit_share": 0.14035087719298245
+    },
+    {
+      "stock_code": "22423",
+      "observed_month": "2011-11",
+      "invoices": 170,
+      "buyers": 148,
+      "units": 942.0,
+      "revenue": 11038.74,
+      "maximum_invoice_units": 80.0,
+      "maximum_buyer_units": 152.0,
+      "paid_value_per_unit": 11.718407643312101,
+      "maximum_invoice_unit_share": 0.08492569002123142,
+      "maximum_buyer_unit_share": 0.1613588110403397
+    },
+    {
+      "stock_code": "22578",
+      "observed_month": "2010-11",
+      "invoices": 81,
+      "buyers": 71,
+      "units": 891.0,
+      "revenue": 757.3499999999999,
+      "maximum_invoice_units": 96.0,
+      "maximum_buyer_units": 96.0,
+      "paid_value_per_unit": 0.8499999999999999,
+      "maximum_invoice_unit_share": 0.10774410774410774,
+      "maximum_buyer_unit_share": 0.10774410774410774
+    },
+    {
+      "stock_code": "22578",
+      "observed_month": "2011-11",
+      "invoices": 212,
+      "buyers": 174,
+      "units": 4980.0,
+      "revenue": 1473.06,
+      "maximum_invoice_units": 312.0,
+      "maximum_buyer_units": 432.0,
+      "paid_value_per_unit": 0.29579518072289157,
+      "maximum_invoice_unit_share": 0.06265060240963856,
+      "maximum_buyer_unit_share": 0.08674698795180723
+    }
+  ],
+  "checks_passed": true
+}

@@ -1,0 +1,12 @@
+{
+  "country_basket_error_units_per_order": -2.842170943040401e-14,
+  "centered_mix_error_units_per_order": -1.0658141036401503e-14,
+  "country_customer_bridge_max_error": 7.275957614183426e-12,
+  "country_sku_bridge_max_error": 7.275957614183426e-12,
+  "country_vs_population_max_error": 7.275957614183426e-11,
+  "band_vs_population_max_error": 7.275957614183426e-11,
+  "fixed_top_customer_count": 38,
+  "country_buyer_reconstruction_max_error": 0,
+  "population_aov_bridge_error_gbp": -4.796163466380676e-14,
+  "passed": true
+}

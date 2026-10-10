@@ -1,0 +1,22 @@
+{
+  "tolerance": 1e-06,
+  "checks": {
+    "fixed_cohort_vs_activity_groups_count_error": 0,
+    "activity_revenue_delta_error": 1.8917489796876907e-10,
+    "loss_gain_reconciliation_error": -1.4551915228366852e-11,
+    "all_four_factor_error": -7.275957614183426e-12,
+    "common_four_factor_error": 1.4551915228366852e-11,
+    "invoice_bins_revenue_delta_error": 1.4551915228366852e-11,
+    "same_customer_window_partition_count_error": 0,
+    "same_customer_november_delta_error": 1.4551915228366852e-11,
+    "same_customer_sep_nov_delta_error": 4.6202330850064754e-10,
+    "invoice_bins_2010_revenue_error": -2.9103830456733704e-11,
+    "invoice_bins_2010_units_error": 0.0,
+    "invoice_bins_2010_orders_error": 0.0,
+    "invoice_bins_2011_revenue_error": 1.7462298274040222e-10,
+    "invoice_bins_2011_units_error": 0.0,
+    "invoice_bins_2011_orders_error": 0.0,
+    "all_window_cohort_partition_max_error": 1.862645149230957e-08
+  },
+  "passed": true
+}

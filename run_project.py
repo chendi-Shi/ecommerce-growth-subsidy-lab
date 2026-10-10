@@ -21,6 +21,9 @@ def main():
     subprocess.run([sys.executable, '-m', 'campaign.decision'], cwd=root, check=True)
     if not args.campaign_only:
         subprocess.run([sys.executable, '-m', 'retail.diagnose'], cwd=root, check=True)
+        subprocess.run([sys.executable, '-m', 'retail.customer_drilldown'], cwd=root, check=True)
+        subprocess.run([sys.executable, '-m', 'retail.geography_drilldown'], cwd=root, check=True)
+        subprocess.run([sys.executable, '-m', 'retail.sku_drilldown'], cwd=root, check=True)
     if args.hive:
         command = [sys.executable, 'infra/run_hive.py']
         sample = root / 'data/processed/retail_hive_sample.csv'
