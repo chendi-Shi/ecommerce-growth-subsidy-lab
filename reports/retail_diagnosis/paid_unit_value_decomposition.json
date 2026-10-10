@@ -1,0 +1,142 @@
+{
+  "identified_sku": {
+    "status": "ok",
+    "paid_unit_value_0": 1.7722988648489533,
+    "paid_unit_value_1": 1.7179995313999803,
+    "delta": -0.054299333448972975,
+    "units_0": 652248.0,
+    "units_1": 661545.0,
+    "common_keys": 1972,
+    "entering_keys": 718,
+    "exiting_keys": 819,
+    "common_quantity_share_0": 0.909830309943457,
+    "common_quantity_share_1": 0.703611999183729,
+    "common_basket_reference_paid_unit_value": 1.6973948335888212,
+    "components": {
+      "within_common_key_paid_unit_value": -0.007847681720617755,
+      "common_key_quantity_mix": -0.08379572977378687,
+      "common_set_quantity_share": -0.3500338952749764,
+      "entering_key_revenue_per_total_unit": 0.563657271992079,
+      "exiting_key_revenue_per_total_unit": -0.17627929867167091
+    },
+    "reconciliation_error": -6.938893903907228e-17,
+    "grouped_components": {
+      "within_common_key_paid_unit_value": -0.007847681720617755,
+      "common_key_quantity_mix": -0.08379572977378687,
+      "entry_exit_and_common_set_share_joint": 0.03734407804543172
+    },
+    "centered_mix_reconciliation_error": 1.3877787807814457e-17
+  },
+  "uk_sku": {
+    "status": "ok",
+    "paid_unit_value_0": 1.7696724201980663,
+    "paid_unit_value_1": 1.7152805123779173,
+    "delta": -0.05439190782014891,
+    "units_0": 551835.0,
+    "units_1": 564271.0,
+    "common_keys": 1944,
+    "entering_keys": 726,
+    "exiting_keys": 819,
+    "common_quantity_share_0": 0.9024853443511195,
+    "common_quantity_share_1": 0.7058204302542572,
+    "common_basket_reference_paid_unit_value": 1.6990614502441954,
+    "components": {
+      "within_common_key_paid_unit_value": -0.00868160213611121,
+      "common_key_quantity_mix": -0.08544947719344424,
+      "common_set_quantity_share": -0.3341457741575649,
+      "entering_key_revenue_per_total_unit": 0.5573585564383071,
+      "exiting_key_revenue_per_total_unit": -0.18347361077133564
+    },
+    "reconciliation_error": -2.0816681711721685e-17,
+    "grouped_components": {
+      "within_common_key_paid_unit_value": -0.00868160213611121,
+      "common_key_quantity_mix": -0.08544947719344424,
+      "entry_exit_and_common_set_share_joint": 0.03973917150940656
+    },
+    "centered_mix_reconciliation_error": -1.3877787807814457e-17
+  },
+  "other_country_sku": {
+    "status": "ok",
+    "paid_unit_value_0": 1.7867328931512851,
+    "paid_unit_value_1": 1.7337721282151444,
+    "delta": -0.05296076493614077,
+    "units_0": 100413.0,
+    "units_1": 97274.0,
+    "common_keys": 816,
+    "entering_keys": 661,
+    "exiting_keys": 563,
+    "common_quantity_share_0": 0.7726987541453796,
+    "common_quantity_share_1": 0.6218413964677098,
+    "common_basket_reference_paid_unit_value": 1.7556675729198787,
+    "components": {
+      "within_common_key_paid_unit_value": 0.004297695360174164,
+      "common_key_quantity_mix": -0.10591097486479727,
+      "common_set_quantity_share": -0.26485537101106066,
+      "entering_key_revenue_per_total_unit": 0.6873358759791929,
+      "exiting_key_revenue_per_total_unit": -0.3738279903996495
+    },
+    "reconciliation_error": -4.0939474033052647e-16,
+    "grouped_components": {
+      "within_common_key_paid_unit_value": 0.004297695360174164,
+      "common_key_quantity_mix": -0.10591097486479727,
+      "entry_exit_and_common_set_share_joint": 0.04865251456848274
+    },
+    "centered_mix_reconciliation_error": 2.7755575615628914e-17
+  },
+  "common_customers_sku": {
+    "status": "ok",
+    "paid_unit_value_0": 1.7882829481742164,
+    "paid_unit_value_1": 1.7280744256091223,
+    "delta": -0.060208522565094125,
+    "units_0": 408619.0,
+    "units_1": 359903.0,
+    "common_keys": 1670,
+    "entering_keys": 739,
+    "exiting_keys": 799,
+    "common_quantity_share_0": 0.8933676603388486,
+    "common_quantity_share_1": 0.7025420738365615,
+    "common_basket_reference_paid_unit_value": 1.706479871492754,
+    "components": {
+      "within_common_key_paid_unit_value": -0.016381682888385204,
+      "common_key_quantity_mix": -0.09865618864065265,
+      "common_set_quantity_share": -0.3256400223319523,
+      "entering_key_revenue_per_total_unit": 0.5798418184899821,
+      "exiting_key_revenue_per_total_unit": -0.19937244719408542
+    },
+    "reconciliation_error": -6.38378239159465e-16,
+    "grouped_components": {
+      "within_common_key_paid_unit_value": -0.016381682888385204,
+      "common_key_quantity_mix": -0.09865618864065265,
+      "entry_exit_and_common_set_share_joint": 0.05482934896394437
+    },
+    "centered_mix_reconciliation_error": 0.0
+  },
+  "customer_sku_pair": {
+    "status": "ok",
+    "paid_unit_value_0": 1.772298864848953,
+    "paid_unit_value_1": 1.71799953139998,
+    "delta": -0.054299333448972975,
+    "units_0": 652248.0,
+    "units_1": 661545.0,
+    "common_keys": 4723,
+    "entering_keys": 50346,
+    "exiting_keys": 48189,
+    "common_quantity_share_0": 0.16012467650341589,
+    "common_quantity_share_1": 0.14134034721749844,
+    "common_basket_reference_paid_unit_value": 1.8814254345232584,
+    "components": {
+      "within_common_key_paid_unit_value": 0.0031139889572071025,
+      "common_key_quantity_mix": -0.0025964929820327595,
+      "common_set_quantity_share": -0.0353413148889852,
+      "entering_key_revenue_per_total_unit": 1.4518355818576212,
+      "exiting_key_revenue_per_total_unit": -1.4713110963927831
+    },
+    "reconciliation_error": -1.8041124150158794e-16,
+    "grouped_components": {
+      "within_common_key_paid_unit_value": 0.0031139889572071025,
+      "common_key_quantity_mix": -0.0025964929820327595,
+      "entry_exit_and_common_set_share_joint": -0.05481682942414714
+    },
+    "centered_mix_reconciliation_error": -9.974659986866641e-18
+  }
+}

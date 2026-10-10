@@ -1,0 +1,25 @@
+{
+  "tolerance_gbp": 1e-06,
+  "aov_shapley_error": -3.197442310920451e-14,
+  "aov_definition_error": -5.684341886080802e-14,
+  "customer_revenue_bridge_error": 1.1059455573558807e-09,
+  "customer_base_buyers_error": 0,
+  "customer_current_buyers_error": 0,
+  "customer_earliest_first_observed_after_current_month": 0,
+  "paid_unit_value_errors": {
+    "identified_sku": -6.938893903907228e-17,
+    "uk_sku": -2.0816681711721685e-17,
+    "other_country_sku": -4.0939474033052647e-16,
+    "common_customers_sku": -6.38378239159465e-16,
+    "customer_sku_pair": -1.8041124150158794e-16
+  },
+  "centered_sku_mix_max_error": 2.7755575615628914e-17,
+  "gross_minus_returns_net_max_error": 1.280568540096283e-08,
+  "sku_population_revenue_max_error": 1.6298145055770874e-09,
+  "sku_population_units_max_error": 0.0,
+  "canonical_ledger_vs_order_revenue_max_error": 3.934837877750397e-08,
+  "identity_scope_money_max_error": 7.62520357966423e-08,
+  "large_buyer_partition_max_error": 1.6298145055770874e-09,
+  "geographic_money_order_units_max_error": 1.775333657860756e-09,
+  "passed": true
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "H0",
+    "hypothesis": "The whole business lost revenue in November",
+    "finding": "Contradicted by the product ledger scope",
+    "evidence": {
+      "all_gross_yoy": 0.015780605953885196,
+      "all_net_yoy": 0.023426192991121253,
+      "identified_gross_yoy": -0.016820721017112628,
+      "anonymous_gross_yoy": 0.15353595071597792
+    },
+    "limit": "Anonymous invoices cannot be assigned to people; identity migration is not established."
+  },
+  {
+    "id": "H1",
+    "hypothesis": "Lower items per order accounts for the identified AOV drop",
+    "finding": "Part of the exact accounting bridge",
+    "evidence": {
+      "aov_delta_gbp": -19.61762937227769,
+      "units_per_order_component_gbp": -5.929078822019246,
+      "paid_unit_value_component_gbp": -13.688550550258412
+    },
+    "limit": "Product mix, customer mix and quantity discounts can jointly change transaction averages."
+  },
+  {
+    "id": "H2",
+    "hypothesis": "Same-SKU paid unit value explains the whole lower pooled unit value",
+    "finding": "Separate within-SKU and mix contributions; do not label all movement a price cut",
+    "evidence": {
+      "status": "ok",
+      "paid_unit_value_0": 1.7722988648489533,
+      "paid_unit_value_1": 1.7179995313999803,
+      "delta": -0.054299333448972975,
+      "units_0": 652248.0,
+      "units_1": 661545.0,
+      "common_keys": 1972,
+      "entering_keys": 718,
+      "exiting_keys": 819,
+      "common_quantity_share_0": 0.909830309943457,
+      "common_quantity_share_1": 0.703611999183729,
+      "common_basket_reference_paid_unit_value": 1.6973948335888212,
+      "components": {
+        "within_common_key_paid_unit_value": -0.007847681720617755,
+        "common_key_quantity_mix": -0.08379572977378687,
+        "common_set_quantity_share": -0.3500338952749764,
+        "entering_key_revenue_per_total_unit": 0.563657271992079,
+        "exiting_key_revenue_per_total_unit": -0.17627929867167091
+      },
+      "reconciliation_error": -6.938893903907228e-17,
+      "grouped_components": {
+        "within_common_key_paid_unit_value": -0.007847681720617755,
+        "common_key_quantity_mix": -0.08379572977378687,
+        "entry_exit_and_common_set_share_joint": 0.03734407804543172
+      },
+      "centered_mix_reconciliation_error": 1.3877787807814457e-17
+    },
+    "limit": "Paid unit averages are not list prices and have no promotion/treatment assignment."
+  },
+  {
+    "id": "H3",
+    "hypothesis": "A few large buyers generate the identified revenue decline",
+    "finding": "Fixed pre-period concentration sensitivity",
+    "evidence": {
+      "excluded_top_revenue_delta": -38225.250000000204,
+      "excluded_top_revenue_yoy": -0.16322941292368887,
+      "remaining_revenue_delta": 18780.860000001616,
+      "remaining_revenue_yoy": 0.020374176642425024
+    },
+    "limit": "Excluding these buyers changes the estimand; no claim that they are invalid or causally responsible."
+  },
+  {
+    "id": "H4",
+    "hypothesis": "Buyer entry offsets missing November buyers while common buyers also change spend",
+    "finding": "Exact four-group revenue bridge",
+    "evidence": [
+      {
+        "customer_group": "base_only_november_buyers",
+        "customers": 919,
+        "orders_0": 1198,
+        "orders_1": 0,
+        "revenue_0": 425252.0,
+        "revenue_1": 0.0,
+        "units_0": 243629.0,
+        "units_1": 0.0,
+        "revenue_delta": -425252.0
+      },
+      {
+        "customer_group": "common_november_buyers",
+        "customers": 687,
+        "orders_0": 1372,
+        "orders_1": 1294,
+        "revenue_0": 730726.39,
+        "revenue_1": 621939.17,
+        "units_0": 408619.0,
+        "units_1": 359903.0,
+        "revenue_delta": -108787.21999999999
+      },
+      {
+        "customer_group": "current_only_first_observed_in_november",
+        "customers": 191,
+        "orders_0": 0,
+        "orders_1": 241,
+        "revenue_0": 0.0,
+        "revenue_1": 79903.35,
+        "units_0": 0.0,
+        "units_1": 51415.0,
+        "revenue_delta": 79903.35
+      },
+      {
+        "customer_group": "current_only_previously_observed",
+        "customers": 782,
+        "orders_0": 0,
+        "orders_1": 1107,
+        "revenue_0": 0.0,
+        "revenue_1": 434691.48000000004,
+        "units_0": 0.0,
+        "units_1": 250227.0,
+        "revenue_delta": 434691.48000000004
+      }
+    ],
+    "limit": "First observed is not newly acquired; November absence is not permanent churn."
+  },
+  {
+    "id": "H5",
+    "hypothesis": "Exact duplicates or return posting reverse the identified sign",
+    "finding": "Alternative record and financial scopes are measured explicitly",
+    "evidence": {
+      "canonical_identified_gross_yoy": -0.016820721017112628,
+      "raw_identified_gross_yoy": -0.01696308920488032,
+      "canonical_identified_net_yoy": -0.007116732156304484,
+      "raw_identified_net_yoy": -0.007311763688951256
+    },
+    "limit": "Returns are posting-date credit notes and cannot be linked reliably to original purchases; exact duplicates may be legitimate identical lines."
+  },
+  {
+    "id": "H6",
+    "hypothesis": "The November pattern represents the full available calendar comparison",
+    "finding": "Compare all 11 matched months and pooled windows",
+    "evidence": {
+      "jan_nov_identified_revenue_yoy": 0.0008330571758907723,
+      "jan_nov_identified_buyers_yoy": 0.009934577174703252,
+      "nov_identified_revenue_yoy": -0.016820721017112628
+    },
+    "limit": "Only two historical years and one retailer; December 2011 is incomplete."
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "test_n": 12800,
+  "test_buyers": 124,
+  "evidence_status": "RETROSPECTIVE diagnostic extension; previously inspected test set",
+  "source": {
+    "dataset": "Hillstrom 2008 retail email randomized experiment",
+    "rows": 64000,
+    "source_url": "https://hillstorm1.s3.us-east-2.amazonaws.com/hillstorm_no_indices.csv.gz",
+    "original_csv_url": "http://www.minethatdata.com/Kevin_Hillstrom_MineThatData_E-MailAnalytics_DataMiningChallenge_2008.03.20.csv",
+    "primary_description": "https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html",
+    "md5": "a68a81291f53a14f4e29002629803ba3",
+    "sha256": "bab6578f60db5d792f1c2372c502f029152a5249cf5ea84390f3b7f885d7234f",
+    "arm_counts": {
+      "0": 21306,
+      "1": 21307,
+      "2": 21387
+    },
+    "assignment_probabilities": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "outcome_window_days": 14,
+    "currency": "USD",
+    "customer_id": "Stable row index assigned locally; source does not disclose customer IDs.",
+    "population": "Customers who last purchased within prior 12 months; existing-customer activation.",
+    "redistribution": "No explicit original dataset licence found; runtime download only, no raw row upload."
+  },
+  "frozen_seed": 2026,
+  "frozen_policy_max_reconstruction_error": 0.0,
+  "paired_decomposition_max_error": 7.105427357601002e-14,
+  "full_vs_test": "Full 64k average ITT and 12.8k policy OPE have different precision; do not conflate.",
+  "combined_targeting": {
+    "estimate": -0.005975371513532766,
+    "se": 0.13944886054694064,
+    "ci_low": -0.2793159648646765,
+    "ci_high": 0.26736522183761097,
+    "p_value": 0.9658218442633313
+  },
+  "pilot_score_variance": 248.9086042603533,
+  "illustrative_hurdles": [
+    {
+      "illustrative_revenue_hurdle": 0.0,
+      "status": "unresolved_at_this_hurdle",
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097
+    },
+    {
+      "illustrative_revenue_hurdle": 0.02,
+      "status": "unresolved_at_this_hurdle",
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097
+    },
+    {
+      "illustrative_revenue_hurdle": 0.05,
+      "status": "unresolved_at_this_hurdle",
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097
+    },
+    {
+      "illustrative_revenue_hurdle": 0.1,
+      "status": "unresolved_at_this_hurdle",
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097
+    },
+    {
+      "illustrative_revenue_hurdle": 0.2,
+      "status": "unresolved_at_this_hurdle",
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097
+    },
+    {
+      "illustrative_revenue_hurdle": 0.3,
+      "status": "upper_bound_below_hurdle",
+      "ci_low": -0.2793159648646765,
+      "ci_high": 0.26736522183761097
+    }
+  ],
+  "economic_formula": "Net advantage = N * (margin * revenue_advantage - cost * contact_share_difference) - extra_implementation_cost",
+  "equal_contact_hurdle": "required revenue advantage = extra_implementation_cost / (N * margin)",
+  "cost_ratio": "c/m, USD revenue required per contact; actual c and m are unobserved",
+  "planning_design": "NEW independent three-arm 1/3 logging experiment, same frozen policies and DR estimator; N is TOTAL users, not per-arm policy-A/B size",
+  "planning_limits": "Normal approximation and stable pilot variance; no peeking/early stopping; direct policy A/B requires different variance/design; no retraining uncertainty included"
+}

@@ -1,0 +1,5 @@
+customer_group,customers,orders_0,orders_1,revenue_0,revenue_1,units_0,units_1,revenue_delta
+base_only_november_buyers,919,1198,0,425252.0,0.0,243629.0,0.0,-425252.0
+common_november_buyers,687,1372,1294,730726.39,621939.17,408619.0,359903.0,-108787.21999999999
+current_only_first_observed_in_november,191,0,241,0.0,79903.35,0.0,51415.0,79903.35
+current_only_previously_observed,782,0,1107,0.0,434691.48000000004,0.0,250227.0,434691.48000000004
