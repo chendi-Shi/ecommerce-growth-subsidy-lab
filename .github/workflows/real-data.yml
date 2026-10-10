@@ -1,0 +1,48 @@
+name: Real data and Apache Hive verification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'campaign/**'
+      - 'infra/**'
+      - 'sql/campaign_hive.sql'
+      - '.github/workflows/real-data.yml'
+      - 'requirements*.txt'
+  pull_request:
+    paths:
+      - 'campaign/**'
+      - 'infra/**'
+      - 'sql/campaign_hive.sql'
+      - '.github/workflows/real-data.yml'
+      - 'requirements*.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  apache-hive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install analysis dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Download and validate real Hillstrom source
+        run: python -m campaign.download
+      - name: Pull pinned Apache Hive release
+        run: docker pull apache/hive:4.2.1
+      - name: Execute Hive ORC marts and reconcile every arm
+        run: python infra/run_hive.py --input data/processed/hillstrom.csv --output reports/hive
+      - name: Upload actual Hive results and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: apache-hive-4.2.1-verification
+          path: reports/hive
+          if-no-files-found: warn
+          retention-days: 30
